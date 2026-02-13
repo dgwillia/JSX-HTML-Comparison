@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding: tells browser how to interpret text characters -->
     <meta charset="UTF-8">
+    <!-- Viewport: makes the page responsive on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans — React App</title>
+    <!-- Preconnect: speeds up font loading by establishing early connection -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts: loads Inter font family with multiple weights -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- This is the only HTML in the entire app -->
-    <!-- React takes over this empty div and fills it with components -->
+    <!-- Root container: React will render all components inside this div -->
     <div id="root"></div>
 
-    <!-- This loads our entry file (index.jsx) which starts the React app -->
-    <!-- "type=module" tells the browser to use modern JavaScript imports -->
+    <!-- Entry point: loads the React app and starts the application -->
+    <!-- type="module" enables modern JavaScript import/export syntax -->
     <script type="module" src="/index.jsx"></script>
 </body>
 </html>
