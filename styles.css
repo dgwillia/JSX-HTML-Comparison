@@ -172,6 +172,21 @@ body {
     background-color: #333;
 }
 
+.download-button.tertiary {
+    background-color: transparent;
+    color: #c2c1ba;
+    border: 1px solid #333;
+}
+
+.download-button.tertiary:hover {
+    background-color: #919191;
+    color: #fff;
+}
+
+.download-button.tertiary:active {
+    background-color: #979797;
+    color: #fff;
+}   
 /* ============================================
    PAGE LABEL
    ============================================ */
