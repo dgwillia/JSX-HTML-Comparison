@@ -1,28 +1,48 @@
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+
+/* Universal reset: removes default browser spacing and ensures consistent box sizing */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Includes padding and border in element width */
 }
 
+/* ============================================
+   BODY & LAYOUT
+   ============================================ */
+
+/* Main page container: centers content vertically and horizontally */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    min-height: 100vh; /* Full viewport height */
     padding: 20px;
 }
 
+/* ============================================
+   CARD CONTAINER
+   ============================================ */
+
+/* Container for all pricing cards: arranges them in a horizontal row */
 .cards-container {
     display: flex;
     flex-direction: row;
-    gap: 24px;
-    flex-wrap: nowrap;
+    gap: 24px; /* Space between cards */
+    flex-wrap: nowrap; /* Prevents cards from wrapping to new line */
     justify-content: center;
     align-items: flex-start;
 }
 
+/* ============================================
+   CARD COMPONENTS
+   ============================================ */
+
+/* Individual pricing card: vertical flex container */
 .card {
     display: flex;
     flex-direction: column;
@@ -31,14 +51,16 @@ body {
     border-radius: 4px;
     padding: 16px;
     width: 320px;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevents card from shrinking */
 }
 
+/* Card header section */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* Card title styling */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,39 +69,50 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price container: aligns price amount and period on same baseline */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
     display: inline-flex;
-    align-items: baseline;
+    align-items: baseline; /* Aligns text on baseline */
 }
 
+/* Price amount styling */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Price period (e.g., "/month") styling */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Card content section: spacing between content and button */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* "Includes" text label */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* ============================================
+   FEATURES LIST
+   ============================================ */
+
+/* Removes default list styling (bullets, padding) */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Individual feature item: flex layout for icon and text alignment */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +121,7 @@ body {
     color: #26251e;
 }
 
+/* Checkmark icon styling */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,28 +129,36 @@ body {
     font-weight: 400;
 }
 
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+/* Download button: positioned at bottom of card using margin-top: auto */
 .download-button {
-    margin-top: auto;
-    width: fit-content;
+    margin-top: auto; /* Pushes button to bottom of flex container */
+    width: fit-content; /* Button width matches content */
     background-color: #e6e5e0;
     border: none;
-    border-radius: 999px;
+    border-radius: 999px; /* Fully rounded (pill shape) */
     padding: 14px 24px;
     font-size: 16px;
     font-weight: 500;
     color: #333;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease; /* Smooth color change on hover */
 }
 
+/* Hover state: lighter background on mouse over */
 .download-button:hover {
     background-color: #D8D6CE;
 }
 
+/* Active state: same as hover when button is clicked */
 .download-button:active {
     background-color: #D8D6CE;
 }
 
+/* Primary button variant: dark background with white text */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,17 +172,22 @@ body {
     background-color: #333;
 }
 
+/* ============================================
+   PAGE LABEL
+   ============================================ */
+
+/* Fixed label at top of page: shows which version is displayed */
 .page-label {
-    position: fixed;
+    position: fixed; /* Stays in place when scrolling */
     top: 16px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centers horizontally */
     font-size: 14px;
     color: #666;
     background: #fff;
     padding: 8px 16px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Subtle shadow */
 }
 
 .page-label strong {
